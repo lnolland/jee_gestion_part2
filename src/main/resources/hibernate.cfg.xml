@@ -1,0 +1,26 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Connexion à la base de données -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gestion_scolarite</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">cytech0001</property>
+
+        <!-- Dialecte Hibernate -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Configuration supplémentaire -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mapping des entités -->
+        <mapping class="com.example.jakartaeehelloworld.Model.Enseignant"/>
+        <mapping class="com.example.jakartaeehelloworld.Model.Matiere"/>
+        <mapping class="com.example.jakartaeehelloworld.Model.Note"/>
+        <mapping class="com.example.jakartaeehelloworld.Model.Etudiant"/>
+        <mapping class="com.example.jakartaeehelloworld.Model.Inscription"/>
+        <mapping class="com.example.jakartaeehelloworld.Model.Cours"/>
+        <mapping class="com.example.jakartaeehelloworld.Model.Utilisateur"/>
+    </session-factory>
+</hibernate-configuration>
